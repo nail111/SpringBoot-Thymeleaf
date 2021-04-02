@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+</head>
+<body>
+<form th:action="resultOfAdd" th:object="${us}" method="post">
+    <hr>
+    <p>
+        Enter your name: <input type="text" th:field="*{name}" />
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" />
+    </p>
+    <br>
+    <hr>
+    <select th:field="*{gender}">
+        <option th:value="Male" th:text="Male"/>
+        <option th:value="Female" th:text="Female"/>
+    </select>
+    <br>
+    <hr>
+    <input type="radio" th:field="*{status}" th:value="Online" th:text="Online" />
+    <br>
+    <input type="radio" th:field="*{status}" th:value="Offline" th:text="Offline" />
+    <hr>
+    <button type="submit">Enter</button>
+</form>
+</body>
+</html>

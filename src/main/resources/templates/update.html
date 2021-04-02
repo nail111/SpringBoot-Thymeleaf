@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<form th:action="resultOfUpdate" th:object="${us}" method="post">
+    Введите id: <input type="text" th:field="*{id2}">
+    <br>
+    <hr>
+    <button type="submit">Enter</button>
+</form>
+</body>
+</html>
